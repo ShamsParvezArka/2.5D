@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://kmdjhe4gc2kh"]
+
+[ext_resource type="Texture2D" uid="uid://djcqfv61aw7l7" path="res://texture/checker.jpg" id="1_74cej"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jsyq"]
+albedo_texture = ExtResource("1_74cej")
+metallic = 1.0
+roughness = 0.8
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l2w3w"]
+material = SubResource("StandardMaterial3D_6jsyq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_obkva"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_l2w3w")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_obkva")
