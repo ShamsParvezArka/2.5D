@@ -4,8 +4,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jsyq"]
 albedo_texture = ExtResource("1_74cej")
-metallic = 1.0
-roughness = 0.8
+metallic = 0.5
+roughness = 0.57
 uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l2w3w"]

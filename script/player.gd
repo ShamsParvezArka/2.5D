@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
 @export var initial_state: State
-@export var anim_tree: AnimationTree
+# @export var anim_tree: AnimationTree
+@export var flipbook: AnimatedSprite3D
 @export var speed := 30.0
 
 @onready var fsm := $FSM
@@ -22,6 +23,8 @@ func _process(delta: float) -> void:
   
   if input != Vector2.ZERO:
     last_facing_direction = input
+  if not is_on_floor():
+    self.velocity.y -= 10 * delta
   
   fsm.update(delta)
   

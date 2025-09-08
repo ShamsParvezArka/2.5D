@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mkxqso1ax673"
-path.s3tc="res://.godot/imported/Jump.png-1f62fb5f6808966c9044567ef3910e48.s3tc.ctex"
+uid="uid://buusvfy6buv78"
+path.s3tc="res://.godot/imported/cloud_noise_texture.jpg-52661edce569edf9c361e8324d39c5ad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprite/Jump.png"
-dest_files=["res://.godot/imported/Jump.png-1f62fb5f6808966c9044567ef3910e48.s3tc.ctex"]
+source_file="res://texture/cloud_noise_texture.jpg"
+dest_files=["res://.godot/imported/cloud_noise_texture.jpg-52661edce569edf9c361e8324d39c5ad.s3tc.ctex"]
 
 [params]
 

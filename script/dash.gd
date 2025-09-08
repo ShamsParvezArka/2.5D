@@ -4,19 +4,19 @@ extends State
 
 
 func enter() -> void:
-  player.anim_tree.set(condition_path, true)
+  player.flipbook.play("dash_%s" %fsm.get_facing_direction_string(player.last_facing_direction))
   timer.start()
 
 
 func update(delta) -> void:
-  player.anim_tree.set(state_path, player.last_facing_direction)
+  fsm.update_facing_direction(player.last_facing_direction)
   
   var dash_direction = player.last_facing_direction if player.input == Vector2.ZERO else player.input 
   player.velocity = Vector3(dash_direction.x, 0, dash_direction.y)
   
   
 func exit() -> void:
-  player.anim_tree.set(condition_path, false)
+  pass
 
 
 func _on_timer_timeout() -> void:
