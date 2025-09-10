@@ -4,6 +4,8 @@ extends CharacterBody3D
 # @export var anim_tree: AnimationTree
 @export var flipbook: AnimatedSprite3D
 @export var speed := 30.0
+@export var gravity := 10
+@export var dash_speed := 2 
 
 @onready var fsm := $FSM
 
@@ -20,14 +22,12 @@ func _process(delta: float) -> void:
     Input.get_action_strength("right") - Input.get_action_strength("left"),
     Input.get_action_strength("down") - Input.get_action_strength("up")
   ).normalized()
-  
   if input != Vector2.ZERO:
     last_facing_direction = input
-  if not is_on_floor():
-    self.velocity.y -= 10 * delta
-  
-  fsm.update(delta)
   
 
 func _physics_process(delta: float) -> void:
+  fsm.update(delta)
+  if not is_on_floor():
+    self.velocity.y -= gravity * delta
   move_and_slide()

@@ -12,11 +12,7 @@ func update(delta) -> void:
   fsm.update_facing_direction(player.last_facing_direction)
   
   var dash_direction = player.last_facing_direction if player.input == Vector2.ZERO else player.input 
-  player.velocity = Vector3(dash_direction.x, 0, dash_direction.y)
-  
-  
-func exit() -> void:
-  pass
+  player.velocity = Vector3(dash_direction.x, 0, dash_direction.y) * player.dash_speed
 
 
 func _on_timer_timeout() -> void:

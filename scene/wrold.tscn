@@ -1582,7 +1582,7 @@ transform = Transform3D(1.99999, -0.00638789, 0, 0.00638789, 1.99999, 0, 0, 0, 2
 script = ExtResource("2_1sa8g")
 initial_state = NodePath("FSM/Idle")
 flipbook = NodePath("Flipbook")
-speed = 40.0
+speed = 70.0
 metadata/_edit_group_ = true
 
 [node name="Collider" type="CollisionShape3D" parent="Player"]
